@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { background: #fdfdfb; color: #1c1c1c; font-family: 'Newsreader', 'Iowan Old Style', Georgia, serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    x-dc { display: block; }
+    a { color: #1f6b46; text-decoration: none; }
+    a:hover { color: #0f4a2f; text-decoration: underline; text-underline-offset: 3px; }
+    h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0; }
+    .bar:hover { color: #fdfdfb; text-decoration: underline; text-underline-offset: 3px; }
+    .nav a { color: #1c1c1c; }
+    .nav a:hover { color: #1f6b46; text-decoration: none; }
+    .row { color: #1c1c1c; display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; padding: 15px 8px; border-bottom: 1px solid rgba(28,28,28,0.14); align-items: baseline; }
+    .row:hover { background: #f4f6f1; text-decoration: none; color: #1c1c1c; }
+    .row:hover .t { text-decoration: underline; text-underline-offset: 3px; }
+    .t { font-size: 19px; color: #1f6b46; line-height: 1.3; }
+    .d { font-size: 16px; color: #3a3a37; }
+    .s { font-size: 14px; color: #6b6b66; line-height: 1.4; }
+    .sc { font-variant: small-caps; letter-spacing: 0.06em; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1280px; background: #fdfdfb;">
+
+  <a href="#" class="bar" style="display: block; background: #1f6b46; color: #fdfdfb; font-size: 14.5px; text-align: center; padding: 8px 32px;">[Winter 2027] reading group: expressions of interest open until [date] →</a>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 30px 32px 0;">
+    <div class="nav" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 14px;">
+      <a href="#" style="font-size: 22px; letter-spacing: 0.02em; line-height: 1;">DAISI</a>
+      <div class="sc" style="display: flex; gap: 26px; font-size: 16px; line-height: 1;">
+        <a href="#" style="border-bottom: 1px solid #1c1c1c; padding-bottom: 2px;">resources</a>
+        <a href="#">mission</a>
+        <a href="#" style="color: #1f6b46;">get involved</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 72px 32px 40px; display: flex; flex-direction: column; gap: 20px;">
+    <h1 style="font-size: 44px; line-height: 1.15;">Resources</h1>
+    <p style="font-size: 21px; line-height: 1.5; color: #3a3a37; max-width: 34em;">A short list, in the order we'd read it. All of it is free.</p>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 56px; display: flex; flex-direction: column; gap: 18px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">
+      <h2 style="font-size: 30px;">Start here</h2>
+      <span style="font-size: 15px; color: #6b6b66;">An afternoon's reading</span>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">The OpenAI/Hugging Face attack, clearly explained</span><span class="s">Dwarkesh Patel</span></span><span class="d">What happened when agents inside OpenAI's training runs coordinated to game an eval and cover their tracks. Read this first.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">Preventing an AI-related catastrophe</span><span class="s">80,000 Hours</span></span><span class="d">A long, careful overview of the problem, the counterarguments, and what people are doing about it.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">AI 2040: Plan A</span><span class="s">AI Futures Project</span></span><span class="d">A concrete scenario from the AI 2027 team for how the next fifteen years could go well: what would have to be agreed, verified and slowed.</span></a>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 56px; display: flex; flex-direction: column; gap: 18px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">
+      <h2 style="font-size: 30px;">Go deeper</h2>
+      <span style="font-size: 15px; color: #6b6b66;">A course, a book, the classic paper, and where the discussion happens</span>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">AI Safety Fundamentals</span><span class="s">BlueDot</span></span><span class="d">Free online course, and the closest thing to a standard introduction. Our reading group adapts it.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">The Alignment Problem</span><span class="s">Brian Christian</span></span><span class="d">The best book-length introduction, and the one to hand to a friend who isn't sure any of this is real.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">Concrete Problems in AI Safety</span><span class="s">Amodei et al., 2016</span></span><span class="d">The paper that set out the technical agenda, and still the cleanest statement of it.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">Alignment Forum</span><span class="s">LessWrong</span></span><span class="d">Where much of the research discussion happens. Start with the curated posts, not the front page.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">LessWrong</span><span class="s">LessWrong</span></span><span class="d">The wider forum the Alignment Forum grew out of: rationality, forecasting, and much of the field's history.</span></a>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 56px; display: flex; flex-direction: column; gap: 18px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">
+      <h2 style="font-size: 30px;">Programs</h2>
+      <span style="font-size: 15px; color: #6b6b66;">The standard routes in; all take undergraduates</span>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">SPAR</span><span class="s">Kairos</span></span><span class="d">Part-time, remote research with a mentor over a semester. Fits alongside classes, and the natural next step after the reading group.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">ARENA</span><span class="s">ARENA</span></span><span class="d">Hands-on alignment engineering: transformers, interpretability, RL. The materials are free online; the in-person bootcamp is in London.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">AI Safety Camp</span><span class="s">AI Safety Camp</span></span><span class="d">Remote, part-time, project-based. A low-barrier first research experience.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">MATS</span><span class="s">MATS</span></span><span class="d">Full-time research with a mentor at a lab or academic group. Competitive; the standard route into technical safety research once you have some experience.</span></a>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 56px; display: flex; flex-direction: column; gap: 18px;">
+    <h2 style="font-size: 30px; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">Careers</h2>
+    <div style="display: flex; flex-direction: column;">
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">80,000 Hours job board</span><span class="s">80,000 Hours</span></span><span class="d">The main list of open roles in AI safety and governance, filterable by role and location.</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">AISafety.com</span><span class="s">AISafety.com</span></span><span class="d">A community-maintained map of the field: jobs, courses, communities, funding.</span></a>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 72px; display: flex; flex-direction: column; gap: 18px;">
+    <h2 style="font-size: 30px; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">Ours</h2>
+    <div style="display: flex; flex-direction: column;">
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">Interest meeting slides</span><span class="s">DAISI</span></span><span class="d">What we said at the first meeting, [date].</span></a>
+      <a class="row" href="#"><span style="display: flex; flex-direction: column; gap: 2px;"><span class="t">Reading group syllabus</span><span class="s">DAISI</span></span><span class="d">The week-by-week reading list for the [Winter 2027] group.</span></a>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 48px;">
+    <div style="border-top: 1px solid rgba(28,28,28,0.14); padding-top: 20px; display: flex; justify-content: space-between; font-size: 14px; color: #6b6b66;">
+      <div style="display: flex; gap: 20px;">
+        <a href="#" style="color: #6b6b66;">[daisi@dartmouth.edu]</a>
+        <a href="#" style="color: #6b6b66;">GroupMe</a>
+        <a href="#" style="color: #6b6b66;">Calendar</a>
+      </div>
+      <span>Dartmouth AI Safety Initiative for Students</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,15 @@
+---
+import type { Resource } from '../data/resources';
+
+interface Props { item: Resource }
+const { item } = Astro.props;
+const external = item.href.startsWith('http');
+---
+
+<a class="row res" href={item.href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
+  <span class="head">
+    <span class="title">{item.title}</span>
+    <span class="source">{item.source}</span>
+  </span>
+  <span class="desc">{item.blurb}</span>
+</a>

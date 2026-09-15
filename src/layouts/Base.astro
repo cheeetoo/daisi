@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string; // href of the current nav item, e.g. '/resources/'
+}
+
+const { title, description = site.description, active } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.fullName}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+    />
+  </head>
+  <body>
+    {site.notice.show && (
+      <a class="notice" href={site.notice.href}>{site.notice.text}&nbsp;→</a>
+    )}
+
+    <header class="col">
+      <nav class="nav" aria-label="Main">
+        <a class="wordmark" href="/">{site.name}</a>
+        <ul class="sc">
+          {site.nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class:list={[{ cta: item.cta }]}
+                aria-current={active === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="col">
+      <slot />
+    </main>
+
+    <footer class="col">
+      <div class="footer">
+        <div class="links">
+          <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
+          <a href={site.groupMeUrl}>GroupMe</a>
+          <a href={site.calendarUrl}>Calendar</a>
+        </div>
+        <span>{site.fullName}</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script>
+      // Email links copy the address instead of opening a mail app. The mailto: href stays as
+      // the fallback (right-click, no JS, clipboard blocked).
+      const toast = document.getElementById('toast');
+      let timer;
+      function show(text) {
+        toast.textContent = text;
+        toast.classList.add('on');
+        clearTimeout(timer);
+        timer = setTimeout(() => toast.classList.remove('on'), 1800);
+      }
+      document.querySelectorAll('[data-copy-email]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          const href = el.getAttribute('href') || '';
+          const email = href.replace(/^mailto:/, '');
+          if (!email || !navigator.clipboard) return;
+          e.preventDefault();
+          navigator.clipboard.writeText(email).then(
+            () => show(`Copied ${email}`),
+            () => { window.location.href = href; },
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

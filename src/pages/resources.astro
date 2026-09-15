@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import ResourceRow from '../components/ResourceRow.astro';
+import { groups } from '../data/resources';
+---
+
+<Base title="Resources" active="/resources/">
+  <section class="page-title">
+    <h1>Resources</h1>
+    <p class="lede">A short list, in the order we'd read it. All of it is free.</p>
+  </section>
+
+  {groups.map((group) => (
+    <section class="section">
+      <div class="section-head">
+        <h2>{group.heading}</h2>
+        {group.note && <span>{group.note}</span>}
+      </div>
+      <div class="list">
+        {group.items.map((item) => <ResourceRow item={item} />)}
+      </div>
+    </section>
+  ))}
+</Base>

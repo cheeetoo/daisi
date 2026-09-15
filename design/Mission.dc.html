@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { background: #fdfdfb; color: #1c1c1c; font-family: 'Newsreader', 'Iowan Old Style', Georgia, serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    x-dc { display: block; }
+    a { color: #1f6b46; text-decoration: none; }
+    a:hover { color: #0f4a2f; text-decoration: underline; text-underline-offset: 3px; }
+    h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0; }
+    .bar:hover { color: #fdfdfb; text-decoration: underline; text-underline-offset: 3px; }
+    .nav a { color: #1c1c1c; }
+    .nav a:hover { color: #1f6b46; text-decoration: none; }
+    .sc { font-variant: small-caps; letter-spacing: 0.06em; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1280px; background: #fdfdfb;">
+
+  <a href="#" class="bar" style="display: block; background: #1f6b46; color: #fdfdfb; font-size: 14.5px; text-align: center; padding: 8px 32px;">[Winter 2027] reading group: expressions of interest open until [date] →</a>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 30px 32px 0;">
+    <div class="nav" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 14px;">
+      <a href="#" style="font-size: 22px; letter-spacing: 0.02em; line-height: 1;">DAISI</a>
+      <div class="sc" style="display: flex; gap: 26px; font-size: 16px; line-height: 1;">
+        <a href="#">resources</a>
+        <a href="#" style="border-bottom: 1px solid #1c1c1c; padding-bottom: 2px;">mission</a>
+        <a href="#" style="color: #1f6b46;">get involved</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 72px 32px 40px; display: flex; flex-direction: column; gap: 20px;">
+    <h1 style="font-size: 44px; line-height: 1.15;">Mission</h1>
+    <p style="font-size: 21px; line-height: 1.5; color: #3a3a37; max-width: 34em;">Why a group like this should exist at Dartmouth, and what we mean by AI safety.</p>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 24px; display: flex; flex-direction: column; gap: 22px; font-size: 19px; line-height: 1.6;">
+    <p>We think advanced AI may be one of the most consequential technologies of this century, and that whether it goes well is still an open question. The systems are improving faster than our ability to understand or steer them, and many of the decisions that will shape how this goes are being made now, by a fairly small number of people.</p>
+    <p>By AI safety we mean the work of making sure increasingly capable systems do what we intend, that we can tell when they don't, and that the institutions around them are ready. That includes technical research on alignment, interpretability and evaluations, and it includes policy and governance. We care most about the failure modes that would be very hard to recover from.</p>
+    <p>The field is young and small relative to what is at stake. Many of the people doing its best work started within the last few years, often while they were students, and there is far more useful work than there are people to do it. Dartmouth doesn't yet have a community for this. We'd like it to.</p>
+    <p>DAISI was founded in [term, year] by [names], with support from [Kairos's Pathfinder program]. We run a reading group each term, bring speakers to campus, and help students find their next step, whether that's a research fellowship, a course, or just the right thing to read.</p>
+    <p>We try to be honest about what is and isn't known, to welcome disagreement, and to make what we run useful rather than just interesting. Nothing we do has prerequisites.</p>
+    <span class="sc" style="align-self: flex-start; font-size: 14px; color: #6b6b66; border-bottom: 1px solid rgba(28,28,28,0.14); padding-bottom: 2px;">draft copy, to be rewritten</span>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 48px 32px 24px; display: flex; flex-direction: column; gap: 18px;">
+    <h2 style="font-size: 30px; padding-bottom: 12px; border-bottom: 1px solid #1c1c1c;">Who runs this</h2>
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: grid; grid-template-columns: 190px minmax(0, 1fr) 140px; gap: 20px; padding: 18px 8px; border-bottom: 1px solid rgba(28,28,28,0.14); align-items: baseline;">
+        <span style="font-size: 20px;">[Name]</span>
+        <span style="font-size: 16.5px; color: #3a3a37;">[Organizer]. [Class of '28], [major]. [One line on what they work on or care about.]</span>
+        <a href="#" style="font-size: 14px; text-align: right;">[email]</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 190px minmax(0, 1fr) 140px; gap: 20px; padding: 18px 8px; border-bottom: 1px solid rgba(28,28,28,0.14); align-items: baseline;">
+        <span style="font-size: 20px;">[Name]</span>
+        <span style="font-size: 16.5px; color: #3a3a37;">[Organizer]. [Class of '27], [major]. [One line.]</span>
+        <a href="#" style="font-size: 14px; text-align: right;">[email]</a>
+      </div>
+    </div>
+    <p style="font-size: 16.5px; color: #3a3a37; padding-top: 6px;">Two of us, for now. If you'd like to help run things, <a href="#">talk to us →</a></p>
+  </div>
+
+  <div style="max-width: 720px; margin: 0 auto; padding: 48px 32px 48px;">
+    <div style="border-top: 1px solid rgba(28,28,28,0.14); padding-top: 20px; display: flex; justify-content: space-between; font-size: 14px; color: #6b6b66;">
+      <div style="display: flex; gap: 20px;">
+        <a href="#" style="color: #6b6b66;">[daisi@dartmouth.edu]</a>
+        <a href="#" style="color: #6b6b66;">GroupMe</a>
+        <a href="#" style="color: #6b6b66;">Calendar</a>
+      </div>
+      <span>Dartmouth AI Safety Initiative for Students</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

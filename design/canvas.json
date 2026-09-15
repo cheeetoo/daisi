@@ -1,0 +1,20 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "title": "Home",         "x": 0,    "y": 0,    "w": 1280, "h": 2080 },
+    { "file": "GetInvolved.dc.html", "title": "Get involved", "x": 1400, "y": 0,    "w": 1280, "h": 2050 },
+    { "file": "Mission.dc.html",     "title": "Mission",      "x": 2800, "y": 0,    "w": 1280, "h": 1590 },
+    { "file": "Resources.dc.html",   "title": "Resources",    "x": 4200, "y": 0,    "w": 1280, "h": 2600 },
+    { "file": "HomeMobile.dc.html",  "title": "Home, phone",  "x": 0,    "y": 3000, "w": 390,  "h": 2230 },
+    { "file": "Variations.dc.html",  "title": "Variations",   "x": 600,  "y": 3000, "w": 1280, "h": 1800 }
+  ],
+  "annotations": [
+    { "id": "read-me", "x": -560, "y": 0, "w": 440, "text": "BUILT ON YOUR MOCK\n\nNewsreader only, #fdfdfb paper, #1f6b46 green, 720px column, hairline rules, small-caps nav. Wordmark is text only now, vertically centred on the nav line.\n\nFour pages: Home, Get involved (form first), Mission (organizers at the bottom), Resources. The green bar is site-wide and links to the form.\n\nSquare brackets are facts to fill in. Mission prose is a draft." },
+    { "id": "note-home", "x": 0, "y": -220, "w": 560, "text": "HOME\n\nGreen bar (your option A) replaces the dateline. Added a 'Start here' list at the bottom so scrolling pays off: four things to read, then 'All resources'. Rows link out. If you want it even fuller, the next candidates are an 'Upcoming' list and a short mission excerpt." },
+    { "id": "note-gi", "x": 1400, "y": -220, "w": 560, "text": "GET INVOLVED\n\nThe expression of interest form is the first thing on the page, drawn inline rather than linked out. Three fields: name, Dartmouth email, and an optional what-are-you-interested-in. No mailing list. In the real site this is a native form posting to a form endpoint, so it keeps this look." },
+    { "id": "note-mission", "x": 2800, "y": -220, "w": 560, "text": "MISSION\n\nUnchanged except: text wordmark, green bar, and 'Who runs this' is now two rows with a 'two of us, for now' line. No people tab in the nav." },
+    { "id": "note-resources", "x": 4200, "y": -220, "w": 560, "text": "RESOURCES\n\nShort now: three to start, five to go deeper, four programs, two career links, two of ours. Dwarkesh under the title you gave, AI 2040 in place of AI 2027, no policy section, no other groups." },
+    { "id": "note-mobile", "x": 0, "y": 2780, "w": 440, "text": "PHONE\n\nBar wraps to two lines at this width; nav stays on one line with the wordmark. Start here rows stack." },
+    { "id": "note-variations", "x": 600, "y": 2780, "w": 560, "text": "VARIATIONS (from the previous round)\n\nYou picked A for the top bar. Still open if you want them: the weight of the call to action (A is current) and whether the main action also sits in the nav (D)." }
+  ],
+  "launch": { "view": "canvas" }
+}

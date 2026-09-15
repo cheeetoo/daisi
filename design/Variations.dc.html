@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { background: #f3f3ef; color: #1c1c1c; font-family: 'Newsreader', 'Iowan Old Style', Georgia, serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    x-dc { display: block; }
+    a { color: #1f6b46; text-decoration: none; }
+    a:hover { color: #0f4a2f; text-decoration: underline; text-underline-offset: 3px; }
+    h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0; }
+    .nav a { color: #1c1c1c; }
+    .nav a:hover { color: #1f6b46; text-decoration: none; }
+    .sc { font-variant: small-caps; letter-spacing: 0.06em; }
+    .cap { font-size: 14px; color: #6b6b66; font-variant: small-caps; letter-spacing: 0.06em; }
+    .frag { background: #fdfdfb; border: 1px solid rgba(28,28,28,0.12); width: 720px; box-sizing: border-box; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1280px; background: #f3f3ef; padding: 40px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; align-items: start;">
+
+  <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 6px;">
+    <h2 style="font-size: 26px;">The tiny thing at the top</h2>
+    <p style="font-size: 16px; color: #3a3a37;">Four places to put a one-line notice about the current reading group. C is what the home page uses.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">A · full-width green bar above the nav</span>
+    <div class="frag" style="width: 580px;">
+      <div style="background: #1f6b46; color: #fdfdfb; font-size: 14px; text-align: center; padding: 7px 16px;">[Winter 2027] reading group: expressions of interest open until [date] →</div>
+      <div style="padding: 22px 28px 0;">
+        <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+          <a href="#" style="font-size: 20px; letter-spacing: 0.02em;">DAISI</a>
+          <div class="sc" style="display: flex; gap: 22px; font-size: 15px;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+        </div>
+        <div style="height: 44px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">B · full-width quiet bar, ruled</span>
+    <div class="frag" style="width: 580px;">
+      <div style="display: flex; justify-content: space-between; font-size: 14px; color: #3a3a37; padding: 7px 28px; border-bottom: 1px solid rgba(28,28,28,0.14);"><span>[Winter 2027] reading group starts [date]</span><a href="#">Express interest →</a></div>
+      <div style="padding: 22px 28px 0;">
+        <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+          <a href="#" style="font-size: 20px; letter-spacing: 0.02em;">DAISI</a>
+          <div class="sc" style="display: flex; gap: 22px; font-size: 15px;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+        </div>
+        <div style="height: 44px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">C · dateline under the nav rule (on the home page)</span>
+    <div class="frag" style="width: 580px;">
+      <div style="padding: 22px 28px 0;">
+        <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+          <a href="#" style="font-size: 20px; letter-spacing: 0.02em;">DAISI</a>
+          <div class="sc" style="display: flex; gap: 22px; font-size: 15px;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(28,28,28,0.14); font-size: 14.5px; color: #3a3a37;">
+          <span class="sc" style="color: #1f6b46; font-size: 13.5px;">now</span>
+          <span>The [Winter 2027] reading group starts [date]. <a href="#">Express interest →</a></span>
+        </div>
+        <div style="height: 34px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">D · small-caps line above the headline</span>
+    <div class="frag" style="width: 580px;">
+      <div style="padding: 22px 28px 0;">
+        <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+          <a href="#" style="font-size: 20px; letter-spacing: 0.02em;">DAISI</a>
+          <div class="sc" style="display: flex; gap: 22px; font-size: 15px;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+        </div>
+        <div style="padding: 40px 0 24px; display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" class="sc" style="font-size: 15px;">expressions of interest open · [winter 2027] reading group →</a>
+          <h1 style="font-size: 36px; line-height: 1.12; text-wrap: balance;">Dartmouth's student organization dedicated to reducing catastrophic risks from&nbsp;AI.</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 6px; padding-top: 16px;">
+    <h2 style="font-size: 26px;">The call to action</h2>
+    <p style="font-size: 16px; color: #3a3a37;">Same two actions, four weights. A is yours. C and D are the quietest and still read as the main thing to do.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">A · outlined button + text link</span>
+    <div class="frag" style="width: 580px; padding: 28px;">
+      <div style="display: flex; gap: 28px; align-items: baseline; font-size: 17px;">
+        <a href="#" style="border: 1px solid #1f6b46; padding: 9px 18px; color: #1f6b46; border-radius: 2px;">Express interest →</a>
+        <a href="#">Chat with us</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">B · filled button + text link</span>
+    <div class="frag" style="width: 580px; padding: 28px;">
+      <div style="display: flex; gap: 28px; align-items: baseline; font-size: 17px;">
+        <a href="#" style="background: #1f6b46; padding: 10px 19px; color: #fdfdfb; border-radius: 2px;">Express interest →</a>
+        <a href="#">Chat with us</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">C · two text links, no button</span>
+    <div class="frag" style="width: 580px; padding: 28px;">
+      <div style="display: flex; gap: 32px; align-items: baseline; font-size: 19px;">
+        <a href="#" style="border-bottom: 1px solid #1f6b46; padding-bottom: 1px;">Express interest →</a>
+        <a href="#" style="color: #3a3a37;">Chat with us →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">D · one large italic link, second action as prose</span>
+    <div class="frag" style="width: 580px; padding: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="#" style="font-size: 28px; font-style: italic; line-height: 1.2;">Express interest →</a>
+        <span style="font-size: 16px; color: #3a3a37;">Or, if you're not sure, <a href="#">get coffee with one of us</a> first.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 6px; padding-top: 16px;">
+    <h2 style="font-size: 26px;">The nav</h2>
+    <p style="font-size: 16px; color: #3a3a37;">A is yours. B drops the mark and the small caps. C adds two pages. D moves the main action into the nav so it is on every page.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">A · daisy + small caps, three pages</span>
+    <div class="frag" style="width: 580px; padding: 22px 28px 20px;">
+      <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+        <a href="#" style="display: flex; align-items: center; gap: 8px; font-size: 20px; letter-spacing: 0.02em;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f6b46" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(45 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(135 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(180 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(225 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(270 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(315 12 12)"></ellipse><circle cx="12" cy="12" r="2.3" fill="#1f6b46" stroke="none"></circle></svg>
+          <span>DAISI</span>
+        </a>
+        <div class="sc" style="display: flex; gap: 22px; font-size: 15px;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">B · wordmark only, italic lowercase links</span>
+    <div class="frag" style="width: 580px; padding: 22px 28px 20px;">
+      <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+        <a href="#" style="font-size: 20px; letter-spacing: 0.02em;">DAISI</a>
+        <div style="display: flex; gap: 22px; font-size: 17px; font-style: italic;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">C · five pages, people and reading group split out</span>
+    <div class="frag" style="width: 580px; padding: 22px 28px 20px;">
+      <div class="nav" style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+        <a href="#" style="display: flex; align-items: center; gap: 8px; font-size: 20px; letter-spacing: 0.02em;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f6b46" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(45 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(135 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(180 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(225 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(270 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(315 12 12)"></ellipse><circle cx="12" cy="12" r="2.3" fill="#1f6b46" stroke="none"></circle></svg>
+          <span>DAISI</span>
+        </a>
+        <div class="sc" style="display: flex; gap: 18px; font-size: 14.5px;"><a href="#">mission</a><a href="#">reading group</a><a href="#">resources</a><a href="#">people</a><a href="#" style="color: #1f6b46;">get involved</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <span class="cap">D · main action lives in the nav</span>
+    <div class="frag" style="width: 580px; padding: 22px 28px 20px;">
+      <div class="nav" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c1c1c; padding-bottom: 12px;">
+        <a href="#" style="display: flex; align-items: center; gap: 8px; font-size: 20px; letter-spacing: 0.02em;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f6b46" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(45 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(135 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(180 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(225 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(270 12 12)"></ellipse><ellipse cx="12" cy="5.4" rx="2.1" ry="3.7" transform="rotate(315 12 12)"></ellipse><circle cx="12" cy="12" r="2.3" fill="#1f6b46" stroke="none"></circle></svg>
+          <span>DAISI</span>
+        </a>
+        <div class="sc" style="display: flex; gap: 22px; font-size: 15px; align-items: center;"><a href="#">resources</a><a href="#">mission</a><a href="#" style="color: #1f6b46; border: 1px solid #1f6b46; border-radius: 2px; padding: 4px 12px;">express interest</a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

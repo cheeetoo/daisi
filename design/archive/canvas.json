@@ -1,0 +1,20 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",       "title": "Paper",       "x": 0,    "y": 0, "w": 1280, "h": 3080 },
+    { "file": "GreenField.dc.html", "title": "Green Field", "x": 1400, "y": 0, "w": 1280, "h": 3620 },
+    { "file": "Essay.dc.html",      "title": "Essay",       "x": 2800, "y": 0, "w": 1280, "h": 2600 },
+    { "file": "Botanical.dc.html",  "title": "Botanical",   "x": 4200, "y": 0, "w": 1280, "h": 3000 },
+    { "file": "Index.dc.html",      "title": "Index",       "x": 5600, "y": 0, "w": 1280, "h": 2280 },
+    { "file": "Wordmarks.dc.html",  "title": "Wordmarks",   "x": 0,    "y": 3860, "w": 1280, "h": 640 }
+  ],
+  "annotations": [
+    { "id": "how-to-read", "x": -560, "y": 0, "w": 440, "text": "HOW TO READ THIS\n\nFive directions, same placeholder content in each, only the style changes. Square brackets are facts to fill in later. Mission text is a draft to react to, not final.\n\nMix and match freely: e.g. Paper's typography with Botanical's daisy, or Index's fact table on any of them.\n\nBottom row: six wordmark treatments, independent of the direction." },
+    { "id": "note-paper", "x": 0, "y": -300, "w": 520, "text": "PAPER (leading candidate)\n\nWhy: closest to the CAISH feel you liked. Serif headlines, monospace labels, warm paper, one accent (Dartmouth green on a single italic phrase). One narrow column, everything on the page, nothing hidden.\n\nTradeoff: quiet. Relies entirely on copy and type; there is no image to catch the eye in the first five seconds." },
+    { "id": "note-greenfield", "x": 1400, "y": -300, "w": 520, "text": "GREEN FIELD\n\nWhy: owns Dartmouth green loudly. Big statement hero, one obvious button, bordered cards. Looks like an established org from day one, closest to the Columbia / Oxford sites.\n\nTradeoff: least minimal of the five. Can read as a department page rather than a student group, and a solid green block is a big commitment." },
+    { "id": "note-essay", "x": 2800, "y": -300, "w": 520, "text": "ESSAY\n\nWhy: the LessWrong lineage. Serif body, sans headings, green links, a table of contents instead of a marketing layout. The whole site is one well-typeset document, which is the most honest form of 'nothing hidden'.\n\nTradeoff: text-heavy and looks like a post more than an organization. No visual hook; people who skim will bounce." },
+    { "id": "note-botanical", "x": 4200, "y": -300, "w": 520, "text": "BOTANICAL\n\nWhy: owns the name. A line-drawn daisy is the 'eye-catching image' Kairos asks for without needing photos. Warmer type, rounded cards, softer tone, which directly lowers the 'this is a scary commitment' feeling.\n\nTradeoff: can read as cute or unserious to exactly the technical students you most want. Easy to overdo." },
+    { "id": "note-index", "x": 5600, "y": -300, "w": 520, "text": "INDEX\n\nWhy: 'nothing hidden' taken literally. The site is a well-set table of facts: Swiss grid, hairlines, monospace metadata, a key-value block in the hero that answers every practical question at once. Unlike any other group site.\n\nTradeoff: cold. Least welcoming for non-technical students, and every new section needs a new row." },
+    { "id": "note-wordmarks", "x": 1400, "y": 3860, "w": 520, "text": "WORDMARKS\n\nSix treatments of the name. A to C are type only; D to F add a daisy mark. C (italic lowercase green) and D (line daisy) are my picks. The full official name only ever appears in small footer text." }
+  ],
+  "launch": { "view": "canvas" }
+}

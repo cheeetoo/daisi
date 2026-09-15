@@ -1,0 +1,57 @@
+---
+// The expression-of-interest form. Posts to `site.formEndpoint` (see src/data/site.ts).
+// Field names are plain so any form backend (Formspree, Netlify Forms, your own) can read them.
+import { site } from '../data/site';
+const wired = site.formEndpoint.length > 0;
+---
+
+<form
+  id="express-interest"
+  class="section"
+  method="POST"
+  action={wired ? site.formEndpoint : undefined}
+  data-netlify="true"
+  name="express-interest"
+>
+  <div class="section-head">
+    <h2>Express interest</h2>
+  </div>
+  <p class="note">
+    Before the term starts we email everyone who fills this in with the details and a short form to
+    confirm a place. No prerequisites, no commitment yet.
+  </p>
+  <div class="form-grid">
+    <label>
+      <span class="label sc">name</span>
+      <input class="field" type="text" name="name" autocomplete="name" required />
+    </label>
+    <label>
+      <span class="label sc">dartmouth email</span>
+      <input class="field" type="email" name="email" autocomplete="email" placeholder="you@dartmouth.edu" required />
+    </label>
+    <label class="wide">
+      <span class="label sc">what are you interested in? optional</span>
+      <input class="field" type="text" name="interests" placeholder="A topic, a question, a worry, something you read. Anything." />
+    </label>
+    <!-- Honeypot: real people never see or fill this. -->
+    <label class="hp" aria-hidden="true">
+      <span>Leave this empty</span>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+    </label>
+    <input type="hidden" name="_subject" value="DAISI: expression of interest" />
+    <input type="hidden" name="_next" value="/thanks/" />
+    <input type="hidden" name="form-name" value="express-interest" />
+  </div>
+  <div class="actions" style="padding-top: 8px;">
+    <button class="button" type="submit">Express interest&nbsp;→</button>
+    <span style="font-size: 15px; color: var(--muted);">
+      Or email <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
+    </span>
+  </div>
+  {!wired && (
+    <p class="note" style="color: #9d162e;">
+      The form isn't wired up yet: set <code>formEndpoint</code> in <code>src/data/site.ts</code>. This
+      note disappears once it is.
+    </p>
+  )}
+</form>

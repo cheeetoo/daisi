@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+
+<Base title="Mission" active="/mission/">
+  <section class="page-title">
+    <h1>Mission</h1>
+    <p class="lede">Why a group like this should exist at Dartmouth, and what we mean by AI safety.</p>
+  </section>
+
+  <section class="prose">
+    <p>
+      We think advanced AI may be one of the most consequential technologies of this century, and
+      that whether it goes well is still an open question. The systems are improving faster than our
+      ability to understand or steer them, and many of the decisions that will shape how this goes
+      are being made now, by a fairly small number of people.
+    </p>
+    <p>
+      By AI safety we mean the work of making sure increasingly capable systems do what we intend,
+      that we can tell when they don't, and that the institutions around them are ready. That
+      includes technical research on alignment, interpretability and evaluations, and it includes
+      policy and governance. We care most about the failure modes that would be very hard to recover
+      from.
+    </p>
+    <p>
+      The field is young and small relative to what is at stake. Many of the people doing its best
+      work started within the last few years, often while they were students, and there is far more
+      useful work than there are people to do it. Dartmouth doesn't yet have a community for this.
+      We'd like it to.
+    </p>
+    <p>
+      DAISI was founded in [term, year] by [names], with support from [Kairos's Pathfinder program].
+      We run a reading group each term, bring speakers to campus, and help students find their next
+      step, whether that's a research fellowship, a course, or just the right thing to read.
+    </p>
+    <p>
+      We try to be honest about what is and isn't known, to welcome disagreement, and to make what we
+      run useful rather than just interesting. Nothing we do has prerequisites.
+    </p>
+    <span class="draft sc">draft copy, to be rewritten</span>
+  </section>
+
+  <section class="section" style="padding-top: 48px;">
+    <div class="section-head"><h2>Who runs this</h2></div>
+    <div class="list">
+      <div class="row">
+        <span class="name">[Name]</span>
+        <span class="desc">[Organizer]. [Class of '28], [major]. [One line on what they work on or care about.]</span>
+        <a class="meta link" href="mailto:[email]">[email]</a>
+      </div>
+      <div class="row">
+        <span class="name">[Name]</span>
+        <span class="desc">[Organizer]. [Class of '27], [major]. [One line.]</span>
+        <a class="meta link" href="mailto:[email]">[email]</a>
+      </div>
+    </div>
+    <p class="note">Two of us, for now. If you'd like to help run things, <a href={`mailto:${site.email}`} data-copy-email>talk to us&nbsp;→</a></p>
+  </section>
+</Base>
