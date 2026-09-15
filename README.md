@@ -1,8 +1,7 @@
 # DAISI website
 
 The site for the Dartmouth AI Safety Initiative for Students, at https://dartmouthaisafety.org.
-Built with [Astro](https://astro.build). Two pages: home (everything, including the sign-up form)
-and resources. Design exploration lives in `design/`; poster assets in `poster/`.
+Built with [Astro](https://astro.build). One page, plus a thanks page after the form. Design exploration lives in `design/`; poster assets in `poster/`.
 
 ## Run it
 
@@ -16,8 +15,8 @@ npm run build     # static site in dist/
 
 | What | Where |
 | --- | --- |
-| Email, GroupMe, booking link, term, reading group details, curriculum, notice bar, nav | `src/data/site.ts` |
-| Resources page and the home page's "Start here" list | `src/data/resources.ts` |
+| Email, GroupMe, booking link, dates, notice bar, nav | `src/data/site.ts` |
+| The "Worth reading" list | `src/data/resources.ts` |
 | Home page copy | `src/pages/index.astro` |
 | The sign-up form | `src/components/SignupForm.astro` |
 | Colours, type, layout | `src/styles/global.css` |

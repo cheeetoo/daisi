@@ -8,5 +8,6 @@ export default defineConfig({
   redirects: {
     '/get-involved': '/#sign-up',
     '/mission': '/',
+    '/resources': '/#reading',
   },
 });

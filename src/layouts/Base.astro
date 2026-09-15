@@ -39,12 +39,12 @@ const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.f
     <header class="col">
       <nav class="nav" aria-label="Main">
         <a class="wordmark" href="/">{site.name}</a>
-        <ul class="sc">
+        <ul>
           {site.nav.map((item) => (
             <li>
               <a
                 href={item.href}
-                class:list={[{ cta: item.cta }]}
+                class:list={[item.tone]}
                 aria-current={active === item.href ? 'page' : undefined}
               >
                 {item.label}
@@ -64,7 +64,7 @@ const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.f
         <div class="links">
           <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
           <a href={site.groupMeUrl}>GroupMe</a>
-          <a href={site.bookingUrl}>Book a time</a>
+          <a href={site.bookingUrl}>Meet with {site.organizer.short}</a>
         </div>
         <span>{site.fullName}. Run by {site.organizer.name} {site.organizer.year}.</span>
       </div>

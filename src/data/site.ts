@@ -36,16 +36,12 @@ export const site = {
     timeOptions: ['5-6:30pm', '5:30-7pm', '6:00-7:30pm', '6:30-8pm', "None of these work, but I'm still interested"],
   },
 
-  // The current reading group.
+  // The current reading group. The description itself is in src/pages/index.astro.
   term: 'Fall 2026',
   group: {
-    when: 'Monday evenings, weeks 4 to 9 of the term: October 5 to November 9',
-    length: 'Six sessions, 90 minutes each',
-    format:
-      'We read together during the session, so there is nothing to prepare between meetings. Dinner is on us, and it will be good.',
-    who: 'Anyone at Dartmouth. No CS or AI background needed; groups mix years and majors',
-    size: 'Small. Fewer than ten people',
-    cost: 'Free',
+    interestMeeting: 'September 28',
+    signupsClose: 'September 30',
+    // Not shown on the site yet (still changing). Kept here for when it is.
     curriculum: [
       { week: '0', title: 'Introduction to machine learning', note: 'optional, self-paced' },
       { week: '1', title: 'Where AI is headed' },
@@ -58,15 +54,16 @@ export const site = {
   },
 
   // The green bar at the top of every page. Set `show: false` to hide it between terms.
+  // It links straight to the Google Form.
   notice: {
     show: true,
-    text: 'Fall 2026 reading group: sign-ups open',
-    href: '/#sign-up',
+    text: 'Reading group sign-ups close September 30',
+    href: 'https://forms.gle/MR9FknDiiA8w3QXX8',
   },
 
+  // `tone` picks the colour: 'gold' or 'green'. Plain items are ink.
   nav: [
-    { label: 'reading group', href: '/#reading-group' },
-    { label: 'resources', href: '/resources/' },
-    { label: 'sign up', href: '/#sign-up', cta: true },
+    { label: 'GroupMe', href: 'https://groupme.com/join_group/117505859/LufWp3ve', tone: 'gold' },
+    { label: 'Get involved', href: '/#reading-group', tone: 'green' },
   ],
 };

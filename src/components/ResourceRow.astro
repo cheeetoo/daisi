@@ -3,13 +3,15 @@ import type { Resource } from '../data/resources';
 
 interface Props { item: Resource }
 const { item } = Astro.props;
-const external = item.href.startsWith('http');
 ---
 
-<a class="row res" href={item.href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
+<div class="row res">
   <span class="head">
-    <span class="title">{item.title}</span>
+    <a class="title" href={item.href} target="_blank" rel="noopener">{item.title}</a>
     <span class="source">{item.source}</span>
   </span>
-  <span class="desc">{item.blurb}</span>
-</a>
+  <span class="desc">
+    {item.blurb}
+    {item.also && <> <a href={item.also.href} target="_blank" rel="noopener">{item.also.label}&nbsp;→</a></>}
+  </span>
+</div>

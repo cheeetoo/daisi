@@ -4,33 +4,32 @@
 // the visitor lands on /thanks/. Without it, the browser posts normally and Google shows its own
 // confirmation page. Either way the response is recorded.
 import { site } from '../data/site';
-const { form, term } = site;
+const { form, organizer } = site;
 const f = form.fields;
 ---
 
 <form id="sign-up" class="section" method="POST" action={form.formAction} data-signup>
   <div class="section-head">
-    <h2>Sign up for the {term} reading group</h2>
+    <h2>Sign up</h2>
   </div>
   <p class="note">
-    Takes two minutes. Filling this in doesn't commit you to anything: I'll get in touch before the
-    group starts to see if it's a fit and to settle on a time.
+    Filling this in doesn't commit you to anything. Or use the <a href={form.formUrl} target="_blank" rel="noopener">Google Form</a>; it's the same one.
   </p>
   <div class="form-grid">
     <label>
-      <span class="label sc">name</span>
+      <span class="label">Name</span>
       <input class="field" type="text" name={f.name} autocomplete="name" required />
     </label>
     <label>
-      <span class="label sc">dartmouth email</span>
+      <span class="label">Dartmouth email</span>
       <input class="field" type="email" name={f.email} autocomplete="email" placeholder="you@dartmouth.edu" required />
     </label>
     <label class="wide">
-      <span class="label sc">why are you interested in AI safety?</span>
-      <textarea class="field" name={f.why} rows="3" placeholder="A few sentences. A question, a worry, something you read. There's no right answer." required></textarea>
+      <span class="label">Why are you interested in AI safety?</span>
+      <textarea class="field" name={f.why} rows="3" placeholder="A few sentences." required></textarea>
     </label>
     <fieldset class="wide checks">
-      <legend class="label sc">which Monday times could you make? check all that work</legend>
+      <legend class="label">Which Monday times could you make? Check all that work.</legend>
       {form.timeOptions.map((opt) => (
         <label class="check">
           <input type="checkbox" name={f.times} value={opt} />
@@ -40,15 +39,13 @@ const f = form.fields;
       <span class="check-error" hidden>Pick at least one, even if it's the last one.</span>
     </fieldset>
     <label class="wide">
-      <span class="label sc">anyone else who might be interested? optional</span>
+      <span class="label">Anyone else who might be interested? Optional.</span>
       <textarea class="field" name={f.referrals} rows="2" placeholder="Names and emails, if you have them."></textarea>
     </label>
   </div>
   <div class="actions" style="padding-top: 8px;">
     <button class="button primary" type="submit">Sign up&nbsp;→</button>
-    <span style="font-size: 15px; color: var(--muted);">
-      Or use the <a href={form.formUrl} target="_blank" rel="noopener">Google Form</a>, or email <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
-    </span>
+    <a href={site.bookingUrl}>Or meet with {organizer.short} first</a>
   </div>
 </form>
 
