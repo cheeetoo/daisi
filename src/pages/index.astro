@@ -9,6 +9,7 @@ const { group, organizer } = site;
 
 <Base>
   <section class="hero">
+    <p class="kicker">Dartmouth AI Safety Initiative</p>
     <h1>Dartmouth's student organization dedicated to <span class="accent">reducing catastrophic risks from AI</span>.</h1>
     <p class="lede">
       We think advanced AI may be the most consequential technology of this century, and that
@@ -18,20 +19,20 @@ const { group, organizer } = site;
     <div class="actions">
       <a class="button primary" href="/#reading-group">Sign up for the reading group&nbsp;→</a>
       <a class="button" href={site.groupMeUrl}>Join the GroupMe</a>
-      <a href={site.bookingUrl}>Meet with {organizer.short}</a>
+      <a href={site.bookingUrl}>Meet with us</a>
     </div>
   </section>
 
   <section class="section" id="reading-group">
     <div class="section-head"><h2>The reading group</h2></div>
     <p class="prose-p">
-      Monday evenings, six weeks, from week 4 to week 9 of the term. Sessions are 90 minutes and we
-      read together, over a good dinner, so there is nothing to prepare in between. Open to anyone at
-      Dartmouth, undergrad or grad. No background needed.
+      Monday evenings, 90 minutes/week for 6 weeks, starting week four of the term. There is no
+      preparation required since we read together, and will have good food for dinner. Open to anyone
+      at Dartmouth regardless of background, undergrad or grad.
     </p>
     <p class="prose-p">
-      Interest meeting <strong>Monday, {group.interestMeeting}</strong>. Time and place in the GroupMe.
-      Sign-ups close <strong>{group.signupsClose}</strong>.
+      Interest meeting Monday, {group.interestMeeting}. Time and place in the GroupMe.
+      Sign-ups close {group.signupsClose}.
     </p>
   </section>
 
