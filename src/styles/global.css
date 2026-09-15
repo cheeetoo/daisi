@@ -9,7 +9,7 @@
   --rule-light: rgba(28, 28, 28, 0.14);
   --hover: #f4f6f1;
   --gold: #8f6a12;
-  --col: 840px;
+  --col: 760px;
 }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -125,10 +125,10 @@ a.row:hover { background: var(--hover); color: var(--ink); text-decoration: none
   .nav ul { gap: 22px; font-size: 17px; }
   .nav li a { white-space: nowrap; }
   .hero { min-height: calc(100svh - 96px); padding: 16px 0 48px; gap: 20px; }
-  .hero h1 { font-size: 38px; line-height: 1.14; }
+  .hero h1 { font-size: 46px; line-height: 1.14; }
   .page-title { padding: 44px 0 28px; }
   .page-title h1 { font-size: 40px; }
-  .lede { font-size: 17.5px; }
+  .lede { font-size: 19px; }
   .section { padding-bottom: 40px; gap: 14px; }
   .section-head h2 { font-size: 26px; }
   .section-head span { display: none; }
