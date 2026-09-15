@@ -1,38 +1,72 @@
 // Everything site-wide that you will want to change lives here.
-// Square brackets mark placeholders to fill in.
 
 export const site = {
   name: 'DAISI',
   fullName: 'Dartmouth AI Safety Initiative for Students',
+  url: 'https://dartmouthaisafety.org',
   tagline: "Dartmouth's student organization dedicated to reducing catastrophic risks from AI.",
   description:
-    'DAISI runs a reading group, hosts speakers, and helps Dartmouth students find their way into AI safety. No prerequisites; everyone at Dartmouth is welcome.',
+    'DAISI runs a six-week AI safety reading group each term and helps Dartmouth students find their way into the field. No prerequisites; everyone at Dartmouth is welcome.',
 
-  // Contact. The email is used in the footer and as the fallback for "email us" links.
-  email: '[daisi@dartmouth.edu]',
-  groupMeUrl: '#',
-  calendarUrl: '#',
-  // Where "Chat with us" and "Book a time" go: a Calendly link, a mailto:, whatever you like.
-  chatUrl: '#',
+  // Who runs it. Used in the footer and the "book a time" link.
+  organizer: { name: 'Finn Cairns', short: 'Finn', year: "'29" },
 
-  // The expression-of-interest form posts here. Easiest option: make a free form at
-  // https://formspree.io, paste its endpoint (https://formspree.io/f/xxxxxxxx) below,
-  // and responses arrive by email. See README.md for the Netlify Forms alternative.
-  formEndpoint: '',
+  // Contact. Email links copy the address to the clipboard (see Base.astro).
+  email: 'finnigan.cairns.29@dartmouth.edu',
+  groupMeUrl: 'https://groupme.com/join_group/117505859/LufWp3ve',
+  // Google Calendar appointment page, for one-on-one chats.
+  bookingUrl: 'https://calendar.app.google/pEXY8EznBbkprutR6',
 
-  // The current term, used in headings and the notice bar.
-  term: '[Winter 2027]',
+  // The sign-up form on the home page posts straight into this Google Form, so responses land
+  // in its spreadsheet. `formUrl` is the public form, used as a fallback link. `formAction` is
+  // the form's submit endpoint, and `fields` maps our inputs to its question ids.
+  // If you edit the Google Form's questions, the ids change: re-run the parser in README.md.
+  form: {
+    formUrl: 'https://forms.gle/MR9FknDiiA8w3QXX8',
+    formAction:
+      'https://docs.google.com/forms/d/e/1FAIpQLSci4_2LxcMfvTIrfJdbs4O1F4uMb0dqD4zef9uQTeCrZURuHw/formResponse',
+    fields: {
+      name: 'entry.984512009',
+      email: 'entry.35599285',
+      why: 'entry.231264075',
+      times: 'entry.1085424216',
+      referrals: 'entry.500140258',
+    },
+    // Must match the Google Form's checkbox options exactly.
+    timeOptions: ['5-6:30pm', '5:30-7pm', '6:00-7:30pm', '6:30-8pm', "None of these work, but I'm still interested"],
+  },
+
+  // The current reading group.
+  term: 'Fall 2026',
+  group: {
+    when: 'Monday evenings, weeks 4 to 9 of the term: October 5 to November 9',
+    length: 'Six sessions, 90 minutes each',
+    format:
+      'We read together during the session, so there is nothing to prepare between meetings. Dinner is on us, and it will be good.',
+    who: 'Anyone at Dartmouth. No CS or AI background needed; groups mix years and majors',
+    size: 'Small. Fewer than ten people',
+    cost: 'Free',
+    curriculum: [
+      { week: '0', title: 'Introduction to machine learning', note: 'optional, self-paced' },
+      { week: '1', title: 'Where AI is headed' },
+      { week: '2', title: 'Fundamentals of misalignment' },
+      { week: '3', title: 'Why would an AI want to do bad things?' },
+      { week: '4', title: 'Threat models' },
+      { week: '5', title: 'What success looks like' },
+      { week: '6', title: 'Research, careers, and further involvement' },
+    ],
+  },
 
   // The green bar at the top of every page. Set `show: false` to hide it between terms.
   notice: {
     show: true,
-    text: '[Winter 2027] reading group: expressions of interest open until [date]',
-    href: '/get-involved/#express-interest',
+    text: 'Fall 2026 reading group: sign-ups open',
+    href: '/#sign-up',
   },
 
   nav: [
+    { label: 'reading group', href: '/#reading-group' },
     { label: 'resources', href: '/resources/' },
-    { label: 'mission', href: '/mission/' },
-    { label: 'get involved', href: '/get-involved/', cta: true },
+    { label: 'sign up', href: '/#sign-up', cta: true },
   ],
 };

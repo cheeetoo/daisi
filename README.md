@@ -1,13 +1,14 @@
 # DAISI website
 
-The site for the Dartmouth AI Safety Initiative for Students, built with [Astro](https://astro.build).
-Four pages: home, get involved, mission, resources. Design exploration lives in `design/`.
+The site for the Dartmouth AI Safety Initiative for Students, at https://dartmouthaisafety.org.
+Built with [Astro](https://astro.build). Two pages: home (everything, including the sign-up form)
+and resources. Design exploration lives in `design/`; poster assets in `poster/`.
 
 ## Run it
 
 ```sh
 npm install
-npm run dev       # http://localhost:4321
+npm run dev       # http://localhost:4321, reloads as you edit
 npm run build     # static site in dist/
 ```
 
@@ -15,39 +16,33 @@ npm run build     # static site in dist/
 
 | What | Where |
 | --- | --- |
-| Name, email, links, current term, the green notice bar, nav | `src/data/site.ts` |
+| Email, GroupMe, booking link, term, reading group details, curriculum, notice bar, nav | `src/data/site.ts` |
 | Resources page and the home page's "Start here" list | `src/data/resources.ts` |
-| Page copy (home, get involved, mission) | `src/pages/*.astro` |
+| Home page copy | `src/pages/index.astro` |
+| The sign-up form | `src/components/SignupForm.astro` |
 | Colours, type, layout | `src/styles/global.css` |
-| Header, footer, `<head>` | `src/layouts/Base.astro` |
-| The expression of interest form | `src/components/InterestForm.astro` |
+| Header, footer, `<head>`, copy-to-clipboard email links | `src/layouts/Base.astro` |
 
-Everything in square brackets, like `[Winter 2027]` or `[date]`, is a placeholder to fill in.
-`grep -rn '\[' src` lists them all.
+## The sign-up form
 
-## The form
+The form on the home page posts straight into the Google Form (`site.form` in `src/data/site.ts`),
+so responses land in the Google Form's spreadsheet. Turn on email notifications there:
+Responses tab → ⋮ → "Get email notifications for new responses".
 
-The form posts three fields (`name`, `email`, `interests`) to `formEndpoint` in `src/data/site.ts`.
-Until that is set, the page shows a red note under the form and submitting does nothing.
+If you change the Google Form's questions, the question ids change and the site form breaks.
+To get the new ids, open the form's public link, view source, and search for `FB_PUBLIC_LOAD_DATA_`;
+each question's numeric id goes in `site.form.fields` as `entry.<id>`. Checkbox options in
+`site.form.timeOptions` must match the Google Form's options exactly.
 
-Easiest: make a free form at [formspree.io](https://formspree.io), paste the endpoint
-(`https://formspree.io/f/xxxxxxxx`) into `formEndpoint`, and submissions arrive by email.
-The form already sends `_subject`, `_next` (redirects to `/thanks/`) and a honeypot field.
+## Deploy (Cloudflare Pages)
 
-If you host on Netlify, the `data-netlify` attribute is already on the form, so Netlify Forms will
-pick it up with no endpoint at all; leave `formEndpoint` empty and delete the red-note block in
-`InterestForm.astro`.
+The domain is on Cloudflare, so Pages is the simplest host. No GitHub needed:
 
-If you'd rather use a Google Form, replace `<InterestForm />` in `src/pages/get-involved.astro` with
-a link or an `<iframe>` to it.
+```sh
+npm run build
+npx wrangler login
+npx wrangler pages deploy dist --project-name dartmouthaisafety
+```
 
-## Deploy
-
-It's a static site, so anything works: Cloudflare Pages, Netlify, Vercel, GitHub Pages.
-Build command `npm run build`, output directory `dist`. Set `site` in `astro.config.mjs` once you
-have a domain.
-
-## Design
-
-`design/` holds the artboards behind the published design canvas (the `.dc.html` files and
-`canvas.json`). They are reference only; the site does not build from them.
+Then in the Cloudflare dashboard: Workers & Pages → dartmouthaisafety → Custom domains → add
+`dartmouthaisafety.org` (and `www`). Repeat the build and deploy commands to publish changes.

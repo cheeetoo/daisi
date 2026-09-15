@@ -50,7 +50,7 @@ export const groups: ResourceGroup[] = [
         title: 'AI Safety Fundamentals',
         source: 'BlueDot',
         blurb:
-          'Free online course, and the closest thing to a standard introduction. Our reading group adapts it.',
+          'Free online course, and the closest thing to a standard introduction. Our reading group borrows from it.',
         href: 'https://aisafetyfundamentals.com/',
       },
       {
@@ -128,23 +128,6 @@ export const groups: ResourceGroup[] = [
         source: 'AISafety.com',
         blurb: 'A community-maintained map of the field: jobs, courses, communities, funding.',
         href: 'https://www.aisafety.com/',
-      },
-    ],
-  },
-  {
-    heading: 'Ours',
-    items: [
-      {
-        title: 'Interest meeting slides',
-        source: 'DAISI',
-        blurb: 'What we said at the first meeting, [date].',
-        href: '#',
-      },
-      {
-        title: 'Reading group syllabus',
-        source: 'DAISI',
-        blurb: 'The week-by-week reading list for the [Winter 2027] group.',
-        href: '#',
       },
     ],
   },

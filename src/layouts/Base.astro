@@ -22,6 +22,7 @@ const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.f
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={site.url} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,9 +64,9 @@ const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.f
         <div class="links">
           <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
           <a href={site.groupMeUrl}>GroupMe</a>
-          <a href={site.calendarUrl}>Calendar</a>
+          <a href={site.bookingUrl}>Book a time</a>
         </div>
-        <span>{site.fullName}</span>
+        <span>{site.fullName}. Run by {site.organizer.name} {site.organizer.year}.</span>
       </div>
     </footer>
 

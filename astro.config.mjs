@@ -2,8 +2,11 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // Set this to the real domain once you have one; it makes canonical URLs and
-  // social previews correct. Harmless to leave until then.
-  // site: 'https://daisi.org',
+  site: 'https://dartmouthaisafety.org',
   trailingSlash: 'ignore',
+  // Old page URLs, in case any are floating around.
+  redirects: {
+    '/get-involved': '/#sign-up',
+    '/mission': '/',
+  },
 });

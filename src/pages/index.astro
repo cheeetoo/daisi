@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import ResourceRow from '../components/ResourceRow.astro';
+import SignupForm from '../components/SignupForm.astro';
 import { site } from '../data/site';
 import { startHere } from '../data/resources';
+const { group, organizer } = site;
 ---
 
 <Base>
@@ -10,62 +12,54 @@ import { startHere } from '../data/resources';
     <h1>{site.tagline}</h1>
     <p class="lede">
       We think advanced AI may be one of the most consequential technologies of this century, and
-      that whether it goes well is still an open question. We run a reading group, host speakers, and
+      that whether it goes well is still an open question. We run a reading group each term and
       help students find their way into the field. No prerequisites, and everyone at Dartmouth is
       welcome.
     </p>
     <div class="actions">
-      <a class="button" href="/get-involved/#express-interest">Express interest&nbsp;→</a>
-      <a href={site.chatUrl}>Chat with us</a>
+      <a class="button primary" href="/#sign-up">Sign up for the reading group&nbsp;→</a>
+      <a class="button" href={site.groupMeUrl}>Join the GroupMe</a>
+      <a href={site.bookingUrl}>Book a time with {organizer.short}</a>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head"><h2>What we run</h2></div>
+  <section class="section" id="reading-group">
+    <div class="section-head">
+      <h2>The {site.term} reading group</h2>
+      <span>Six Monday evenings, dinner included</span>
+    </div>
     <div class="list">
-      <a class="row" href="/get-involved/">
-        <span class="name">Reading group</span>
-        <span class="desc">
-          [X] weeks, one evening a week over [dinner]. A guided tour of the core ideas in AI safety,
-          in groups of [6 to 8]. No prerequisites.
-        </span>
-        <span class="meta">{site.term}<br />[weekday]s, [time]</span>
-      </a>
-      <a class="row" href={site.calendarUrl}>
-        <span class="name">Speaker events</span>
-        <span class="desc">
-          Talks and Q&amp;As with people working on AI safety, a few times a term. Open to everyone,
-          no sign-up.
-        </span>
-        <span class="meta">Next: [date]</span>
-      </a>
-      <a class="row" href={site.chatUrl}>
-        <span class="name">Chat with us</span>
-        <span class="desc">Not sure whether any of this is for you? Get coffee with one of us. No agenda.</span>
-        <span class="meta">Any time</span>
-      </a>
+      <div class="row kv"><span class="k sc">when</span><span class="v">{group.when}. Exact time set by who signs up</span></div>
+      <div class="row kv"><span class="k sc">length</span><span class="v">{group.length}</span></div>
+      <div class="row kv"><span class="k sc">format</span><span class="v">{group.format}</span></div>
+      <div class="row kv"><span class="k sc">who</span><span class="v">{group.who}</span></div>
+      <div class="row kv"><span class="k sc">size</span><span class="v">{group.size}</span></div>
+      <div class="row kv"><span class="k sc">cost</span><span class="v">{group.cost}</span></div>
+    </div>
+    <h3 class="sub">What we'll cover</h3>
+    <ol class="weeks">
+      {group.curriculum.map((w) => (
+        <li>
+          <span class="wk sc">week {w.week}</span>
+          <span class="t">{w.title}{w.note && <span class="n"> · {w.note}</span>}</span>
+        </li>
+      ))}
+    </ol>
+    <p class="note">
+      The plan is to leave with a real understanding of why people worry about this, what the
+      strongest counterarguments are, and where you'd go next if you wanted to work on it. Readings
+      are still being chosen and the outline may shift. If more people want in than fit, I'll run a
+      second group.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="/#sign-up">Sign up&nbsp;→</a>
+      <a href={site.bookingUrl}>Not sure? Book a time to talk it over</a>
     </div>
   </section>
 
-  <section class="two">
-    <div>
-      <h3>Who it's for</h3>
-      <p>
-        Anyone at Dartmouth. This isn't a computer science thing: you don't need a particular major,
-        and you don't need to have read anything yet. The reading group asks for about 1h45 a week
-        for [X] weeks. Everything else is drop-in.
-      </p>
-    </div>
-    <div>
-      <h3>Why this matters</h3>
-      <p>
-        AI systems are improving faster than our understanding of them, and the decisions that shape
-        how this goes are being made now. Students can do real work here. <a href="/mission/">Read our mission&nbsp;→</a>
-      </p>
-    </div>
-  </section>
+  <SignupForm />
 
-  <section class="section">
+  <section class="section" id="start-here">
     <div class="section-head">
       <h2>Start here</h2>
       <span>Three things to read before anything else</span>
