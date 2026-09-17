@@ -62,11 +62,10 @@ const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.f
     <footer class="col">
       <div class="footer">
         <div class="links">
-          <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
           <a href={site.groupMeUrl}>GroupMe</a>
-          <a href={site.bookingUrl}>Meet with us</a>
+          <a href={site.bookingUrl}>Chat with us</a>
+          <a href={`mailto:${site.email}`} data-copy-email>{site.email}</a>
         </div>
-        <span>{site.fullName}. Run by {site.organizer.name} {site.organizer.year}.</span>
       </div>
     </footer>
 

@@ -1,4 +1,4 @@
-// The "Worth reading" list on the home page. Keep it short. Every entry links out.
+// The "Useful reading" list on the home page. Keep it short. Every entry links out.
 
 export type Resource = {
   title: string;

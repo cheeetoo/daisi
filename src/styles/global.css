@@ -82,6 +82,16 @@ a.row:hover { background: var(--hover); color: var(--ink); text-decoration: none
 .row.kv .k { font-size: 15px; color: var(--muted); }
 .row.kv .v { font-size: 16.5px; }
 
+/* Collapsible extra detail */
+.more summary { display: inline-flex; align-items: baseline; gap: 8px; cursor: pointer; list-style: none; font-size: 17px; color: var(--green); }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::before { content: '→'; display: inline-block; transition: transform 0.15s; }
+.more[open] summary::before { transform: rotate(90deg); }
+.more summary:hover { color: var(--green-dark); text-decoration: underline; text-underline-offset: 3px; }
+.more .list { margin-top: 12px; border-top: 1px solid var(--rule-light); }
+.more .row.kv { grid-template-columns: 96px minmax(0, 1fr); }
+.more .aside { color: var(--muted); }
+
 /* Two columns of short text */
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; padding-bottom: 64px; }
 .two h3 { font-size: 22px; margin-bottom: 12px; }
@@ -144,6 +154,8 @@ a.row:hover { background: var(--hover); color: var(--ink); text-decoration: none
   .actions .button { width: 100%; text-align: center; box-sizing: border-box; }
   .row.kv .k { grid-area: k; }
   .row.kv .v { grid-area: v; font-size: 15.5px; }
+  .more .row.kv { grid-template-columns: 68px minmax(0, 1fr); }
+  .more summary { font-size: 16px; }
   .two { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 40px; }
   .two h3 { font-size: 21px; margin-bottom: 8px; }
   .two p { font-size: 15.5px; }

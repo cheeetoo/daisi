@@ -16,7 +16,9 @@ npm run build     # static site in dist/
 | What | Where |
 | --- | --- |
 | Email, GroupMe, booking link, dates, notice bar, nav | `src/data/site.ts` |
-| The "Worth reading" list | `src/data/resources.ts` |
+| Where dartmouthaisafety.org/qr goes (QR image in `poster/site-qr.*`) | `qrUrl` in `src/data/site.ts` |
+| Weekly topics (collapsed on the home page) | `group.curriculum` in `src/data/site.ts` |
+| The "Useful reading" list | `src/data/resources.ts` |
 | Home page copy | `src/pages/index.astro` |
 | The sign-up form | `src/components/SignupForm.astro` |
 | Colours, type, layout | `src/styles/global.css` |

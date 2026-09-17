@@ -4,7 +4,7 @@
 // the visitor lands on /thanks/. Without it, the browser posts normally and Google shows its own
 // confirmation page. Either way the response is recorded.
 import { site } from '../data/site';
-const { form, organizer } = site;
+const { form } = site;
 const f = form.fields;
 ---
 
@@ -13,7 +13,7 @@ const f = form.fields;
     <h2>Sign up</h2>
   </div>
   <p class="note">
-    Filling this in doesn't commit you to anything. Or use the <a href={form.formUrl} target="_blank" rel="noopener">Google Form</a>; it's the same one.
+    Or use the <a href={form.formUrl} target="_blank" rel="noopener">Google Form</a>. Filling this out doesn't commit you to anything.
   </p>
   <div class="form-grid">
     <label>
@@ -45,7 +45,7 @@ const f = form.fields;
   </div>
   <div class="actions" style="padding-top: 8px;">
     <button class="button primary" type="submit">Sign up&nbsp;→</button>
-    <a href={site.bookingUrl}>Unsure? Meet with us first</a>
+    <a href={site.bookingUrl}>Unsure? Chat with us first</a>
   </div>
 </form>
 

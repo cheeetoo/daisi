@@ -4,26 +4,26 @@ import ResourceRow from '../components/ResourceRow.astro';
 import SignupForm from '../components/SignupForm.astro';
 import { site } from '../data/site';
 import { reading } from '../data/resources';
-const { group, organizer } = site;
+const { group } = site;
 ---
 
 <Base>
   <section class="hero">
     <h1>Dartmouth's student organization dedicated to <span class="accent">reducing catastrophic risks from AI</span>.</h1>
     <p class="lede">
-      We think advanced AI may be the most consequential technology of this century, and that
-      whether it goes well is still an open question. We run a reading group and help students find
-      their way into the field. Anyone at Dartmouth is welcome.
+      Reducing risks from advanced AI may be one of the most important problems of our time. We
+      run an introductory <a href="/#reading-group">reading group</a> on why AI safety matters and what we can do about it. Open to
+      anyone regardless of background, undergrad or grad students.
     </p>
     <div class="actions">
       <a class="button primary" href="/#reading-group">Sign up for the reading group&nbsp;→</a>
       <a class="button" href={site.groupMeUrl}>Join the GroupMe</a>
-      <a href={site.bookingUrl}>Meet with us</a>
+      <a href={site.bookingUrl}>Chat with us</a>
     </div>
   </section>
 
   <section class="section" id="reading-group">
-    <div class="section-head"><h2>The reading group</h2></div>
+    <div class="section-head"><h2>Reading group</h2></div>
     <p class="prose-p">
       Monday evenings, 90 minutes/week for 6 weeks, starting week four of the term. There is no
       preparation required since we read together, and will have good food for dinner. Open to anyone
@@ -33,12 +33,23 @@ const { group, organizer } = site;
       Interest meeting Monday, {group.interestMeeting}. Time and place in the GroupMe.
       Sign-ups close {group.signupsClose}.
     </p>
+    <details class="more">
+      <summary>Rough weekly topics (subject to change)</summary>
+      <div class="list">
+        {group.curriculum.map((w) => (
+          <div class="row kv">
+            <span class="k">Week {w.week}</span>
+            <span class="v">{w.title}{w.note && <span class="aside"> ({w.note})</span>}</span>
+          </div>
+        ))}
+      </div>
+    </details>
   </section>
 
   <SignupForm />
 
   <section class="section" id="reading">
-    <div class="section-head"><h2>Worth reading</h2></div>
+    <div class="section-head"><h2>Useful reading</h2></div>
     <div class="list">
       {reading.map((item) => <ResourceRow item={item} />)}
     </div>
