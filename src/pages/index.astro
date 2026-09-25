@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import ResourceRow from '../components/ResourceRow.astro';
+// import ResourceRow from '../components/ResourceRow.astro';
 import SignupForm from '../components/SignupForm.astro';
 import { site } from '../data/site';
-import { reading } from '../data/resources';
+// import { reading } from '../data/resources';
 const { group } = site;
 ---
 
@@ -48,10 +48,12 @@ const { group } = site;
 
   <SignupForm />
 
+  {/* Useful reading: hidden for now. Restore the imports above to bring it back.
   <section class="section" id="reading">
     <div class="section-head"><h2>Useful reading</h2></div>
     <div class="list">
       {reading.map((item) => <ResourceRow item={item} />)}
     </div>
   </section>
+  */}
 </Base>
