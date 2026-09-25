@@ -39,8 +39,7 @@ export const site = {
   // The current reading group. The description itself is in src/pages/index.astro.
   term: 'Fall 2026',
   group: {
-    interestMeeting: 'September 28',
-    signupsClose: 'September 30',
+    signupsClose: 'October 7',
     // Shown on the home page as a collapsed "rough weekly topics" list.
     curriculum: [
       { week: '0', title: 'Introduction to machine learning', note: 'optional, self-paced' },
@@ -57,7 +56,7 @@ export const site = {
   // It links straight to the Google Form.
   notice: {
     show: true,
-    text: 'Reading group sign-ups close September 30',
+    text: 'Reading group sign-ups close October 7',
     href: 'https://forms.gle/97baAyhwJrwW4Xci9',
   },
 
