@@ -15,7 +15,7 @@ export const site = {
   bookingUrl: 'https://calendar.app.google/pEXY8EznBbkprutR6',
   // Where dartmouthaisafety.org/qr sends people. Printed QR codes point at /qr, so change this
   // (and redeploy) to repoint them without reprinting anything.
-  qrUrl: 'https://forms.gle/97baAyhwJrwW4Xci9',
+  qrUrl: 'https://groupme.com/join_group/117505859/LufWp3ve',
 
   // The sign-up form on the home page posts straight into this Google Form, so responses land
   // in its spreadsheet. `formUrl` is the public form, used as a fallback link. `formAction` is
