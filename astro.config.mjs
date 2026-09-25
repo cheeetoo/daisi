@@ -12,5 +12,7 @@ export default defineConfig({
     '/resources': '/#reading',
     // Short link for QR codes. The target is `qrUrl` in src/data/site.ts.
     '/qr': site.qrUrl,
+    // Memorable link straight to the Google Form.
+    '/signup': site.form.formUrl,
   },
 });
