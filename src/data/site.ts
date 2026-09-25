@@ -15,14 +15,14 @@ export const site = {
   bookingUrl: 'https://calendar.app.google/pEXY8EznBbkprutR6',
   // Where dartmouthaisafety.org/qr sends people. Printed QR codes point at /qr, so change this
   // (and redeploy) to repoint them without reprinting anything.
-  qrUrl: 'https://forms.gle/YgJchjRumHHrTWF99',
+  qrUrl: 'https://forms.gle/97baAyhwJrwW4Xci9',
 
   // The sign-up form on the home page posts straight into this Google Form, so responses land
   // in its spreadsheet. `formUrl` is the public form, used as a fallback link. `formAction` is
   // the form's submit endpoint, and `fields` maps our inputs to its question ids.
   // If you edit the Google Form's questions, the ids change: see README.md.
   form: {
-    formUrl: 'https://forms.gle/YgJchjRumHHrTWF99',
+    formUrl: 'https://forms.gle/97baAyhwJrwW4Xci9',
     formAction:
       'https://docs.google.com/forms/d/e/1FAIpQLSci4_2LxcMfvTIrfJdbs4O1F4uMb0dqD4zef9uQTeCrZURuHw/formResponse',
     fields: {
@@ -58,7 +58,7 @@ export const site = {
   notice: {
     show: true,
     text: 'Reading group sign-ups close September 30',
-    href: 'https://forms.gle/YgJchjRumHHrTWF99',
+    href: 'https://forms.gle/97baAyhwJrwW4Xci9',
   },
 
   // `tone` picks the colour: 'gold' or 'green'. Plain items are ink.
